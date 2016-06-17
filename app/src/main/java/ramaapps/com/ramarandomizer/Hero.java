@@ -38,7 +38,7 @@ public class Hero {
     private String instanceRoleTxt;
 
     /**
-     * Constructor with a string input
+     * Constructor with string input
      *
      * @param rH random hero integer
      */
