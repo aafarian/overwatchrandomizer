@@ -30,12 +30,18 @@ public class Hero {
     String roleTxt[] = {"Offense", "Offense", "Offense", "Offense", "Offense", "Offense", "Defense", "Defense", "Defense", "Defense", "Defense", "Defense",
             "Tank", "Tank", "Tank", "Tank", "Tank", "Support", "Support", "Support", "Support"};
 
+    // instance variables
     private String instanceName;
     private int instanceImage;
     private int instanceDetail;
     private int instanceRoleIcon;
     private String instanceRoleTxt;
 
+    /**
+     * Constructor with integer input
+     *
+     * @param rH random hero integer
+     */
     public Hero (int rH)
     {
         this.instanceName = name[rH];
