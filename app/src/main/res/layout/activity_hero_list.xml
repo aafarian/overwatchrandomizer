@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ramaapps.com.ramarandomizer.heroList"
+    android:background="#FF0C0D11">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/topSection"
+        android:paddingTop="10dp"
+        android:weightSum="0"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/customBackBtn"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:onClick="goBack" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton3"
+                    android:src="@android:drawable/ic_menu_revert"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:onClick="goBack"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Select All  "
+                android:id="@+id/textView13"
+                android:layout_below="@+id/heroRoles"
+                android:layout_centerHorizontal="true"
+                android:textSize="13dp"
+                android:textColor="#FFFFFF"
+                android:clickable="true"
+                android:onClick="selectAllGo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="/"
+                android:id="@+id/textView14"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="  Deselect All    "
+                android:id="@+id/textView15"
+                android:layout_below="@+id/heroRoles"
+                android:layout_centerHorizontal="true"
+                android:textSize="13dp"
+                android:textColor="#FFFFFF"
+                android:clickable="true"
+                android:onClick="deselectAllGo" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heroRoles"
+        android:paddingTop="10dp"
+        android:weightSum="0"
+        android:layout_below="@+id/topSection"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroRoleIcons" >
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/offense_icon2"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/imageView5"
+                android:src="@drawable/defense_icon"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/imageView6"
+                android:src="@drawable/tank_icon2"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/support_icon"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroRoleLabels" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Offense"
+                android:id="@+id/textView7"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Defense "
+                android:id="@+id/textView8"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tank  "
+                android:id="@+id/textView9"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Support"
+                android:id="@+id/textView10"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroesLine1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/genji_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Genji"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bastion_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Bastion"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dva_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="D.Va"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lucio_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Lúcio"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroesLine2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mccree_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="McCree"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hanzo_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Hanzo"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reinhardt_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Reinhardt"
+                    android:singleLine="false"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mercy_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Mercy"
+                    android:singleLine="false"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroesLine3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pharah_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Pharah"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/junkrat_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Junkrat"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roadhog_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="8dp"
+                    android:text="Roadhog" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/symmetra_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="8dp"
+                    android:text="Symmetra" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroesLine4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reaper_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Reaper"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mei_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Mei"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/winston_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="8dp"
+                    android:text="Winston" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zenyatta_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="8dp"
+                    android:text="Zenyatta" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroesLine5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/soldier76_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Soldier: 76"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/torbjorn_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Torbjörn"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zarya_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="8dp"
+                    android:text="Zarya" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox20"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heroesLine6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tracer_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Tracer"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/widowmaker_checkbox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:text="Widowmaker"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox23"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox24"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="1"
+                    android:textSize="10dp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heroRoles"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Randomize!"
+            android:id="@+id/customBtn"
+            android:onClick="randomGoCustom"
+            android:layout_below="@+id/heroRoles"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:gravity="center"
+        android:paddingTop="108dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/offenseCheck"
+                android:checked="true"
+                android:contextClickable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#000000"
+                android:layout_weight="0"
+                android:onClick="roleCheckOffense" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/defenseCheck"
+                android:checked="true"
+                android:contextClickable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#000000"
+                android:layout_weight="0"
+                android:onClick="roleCheckDefense" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tankCheck"
+                android:checked="true"
+                android:contextClickable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#000000"
+                android:layout_weight="0"
+                android:onClick="roleCheckTank" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/supportCheck"
+                android:checked="true"
+                android:contextClickable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#000000"
+                android:layout_weight="0"
+                android:onClick="roleCheckSupport" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

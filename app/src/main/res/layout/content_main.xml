@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ramaapps.com.ramarandomizer.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#0c0d11">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/topSection"
+        android:paddingTop="10dp"
+        android:weightSum="0">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="66dp">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/titleText"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:text="Pick which roles you like to play"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="or click here to customize heroes"
+            android:id="@+id/textView5"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true"
+            android:textColorLink="#0019fe"
+            android:linksClickable="false"
+            android:clickable="true"
+            android:onClick="listGo"
+            android:nestedScrollingEnabled="true"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:paddingTop="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topSection"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/middleSection"
+        android:paddingTop="60dp"
+        android:weightSum="0">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rolePics">
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/offenseIcon"
+                android:src="@drawable/offense_icon"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/defenseIcon"
+                android:src="@drawable/defense_icon"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/tankIcon"
+                android:src="@drawable/tank_icon"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:id="@+id/supportIcon"
+                android:src="@drawable/support_icon"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/roleText">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Offense"
+                android:id="@+id/textView"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Defense "
+                android:id="@+id/textView3"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tank  "
+                android:id="@+id/textView2"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Support"
+                android:id="@+id/textView4"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/roleSection"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/offenseBox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/defenseBox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tankBox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/supportBox"
+                    android:checked="true"
+                    android:contextClickable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:layout_weight="0" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/middleSection"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bottomSection"
+        android:paddingTop="0dp"
+        android:gravity="center_vertical"
+        android:weightSum="0"
+        android:paddingBottom="60dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Randomize!"
+            android:id="@+id/randomBtn"
+            android:onClick="randomGo"                 />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalTextView"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</RelativeLayout>
