@@ -12,41 +12,67 @@ import java.util.Random;
 
 public class heroList extends AppCompatActivity {
 
+    private CheckBox offenseCheck;
+    private CheckBox defenseCheck;
+    private CheckBox tankCheck;
+    private CheckBox supportCheck;
+    private CheckBox genji_checkbox;
+    private CheckBox mccree_checkbox;
+    private CheckBox pharah_checkbox;
+    private CheckBox reaper_checkbox;
+    private CheckBox soldier76_checkbox;
+    private CheckBox tracer_checkbox;
+    private CheckBox bastion_checkbox;
+    private CheckBox hanzo_checkbox;
+    private CheckBox junkrat_checkbox;
+    private CheckBox mei_checkbox;
+    private CheckBox torbjorn_checkbox;
+    private CheckBox widowmaker_checkbox;
+    private CheckBox dva_checkbox;
+    private CheckBox reinhardt_checkbox;
+    private CheckBox roadhog_checkbox;
+    private CheckBox winston_checkbox;
+    private CheckBox zarya_checkbox;
+    private CheckBox lucio_checkbox;
+    private CheckBox mercy_checkbox;
+    private CheckBox symmetra_checkbox;
+    private CheckBox zenyatta_checkbox;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hero_list);
 
+        offenseCheck = (CheckBox) findViewById(R.id.offenseCheck);
+        defenseCheck = (CheckBox) findViewById(R.id.defenseCheck);
+        tankCheck = (CheckBox) findViewById(R.id.tankCheck);
+        supportCheck = (CheckBox) findViewById(R.id.supportCheck);
+        genji_checkbox = (CheckBox) findViewById(R.id.genji_checkbox);
+        mccree_checkbox = (CheckBox) findViewById(R.id.mccree_checkbox);
+        pharah_checkbox = (CheckBox) findViewById(R.id.pharah_checkbox);
+        reaper_checkbox = (CheckBox) findViewById(R.id.reaper_checkbox);
+        soldier76_checkbox = (CheckBox) findViewById(R.id.soldier76_checkbox);
+        tracer_checkbox = (CheckBox) findViewById(R.id.tracer_checkbox);
+        bastion_checkbox = (CheckBox) findViewById(R.id.bastion_checkbox);
+        hanzo_checkbox = (CheckBox) findViewById(R.id.hanzo_checkbox);
+        junkrat_checkbox = (CheckBox) findViewById(R.id.junkrat_checkbox);
+        mei_checkbox = (CheckBox) findViewById(R.id.mei_checkbox);
+        torbjorn_checkbox = (CheckBox) findViewById(R.id.torbjorn_checkbox);
+        widowmaker_checkbox = (CheckBox) findViewById(R.id.widowmaker_checkbox);
+        dva_checkbox = (CheckBox) findViewById(R.id.dva_checkbox);
+        reinhardt_checkbox = (CheckBox) findViewById(R.id.reinhardt_checkbox);
+        roadhog_checkbox = (CheckBox) findViewById(R.id.roadhog_checkbox);
+        winston_checkbox = (CheckBox) findViewById(R.id.winston_checkbox);
+        zarya_checkbox = (CheckBox) findViewById(R.id.zarya_checkbox);
+        lucio_checkbox = (CheckBox) findViewById(R.id.lucio_checkbox);
+        mercy_checkbox = (CheckBox) findViewById(R.id.mercy_checkbox);
+        symmetra_checkbox = (CheckBox) findViewById(R.id.symmetra_checkbox);
+        zenyatta_checkbox = (CheckBox) findViewById(R.id.zenyatta_checkbox);
 
     }
 
     public void selectAllGo(View view) {
-        final CheckBox offenseCheck = (CheckBox) findViewById(R.id.offenseCheck);
-        final CheckBox defenseCheck = (CheckBox) findViewById(R.id.defenseCheck);
-        final CheckBox tankCheck = (CheckBox) findViewById(R.id.tankCheck);
-        final CheckBox supportCheck = (CheckBox) findViewById(R.id.supportCheck);
-        final CheckBox genji_checkbox = (CheckBox) findViewById(R.id.genji_checkbox);
-        final CheckBox mccree_checkbox = (CheckBox) findViewById(R.id.mccree_checkbox);
-        final CheckBox pharah_checkbox = (CheckBox) findViewById(R.id.pharah_checkbox);
-        final CheckBox reaper_checkbox = (CheckBox) findViewById(R.id.reaper_checkbox);
-        final CheckBox soldier76_checkbox = (CheckBox) findViewById(R.id.soldier76_checkbox);
-        final CheckBox tracer_checkbox = (CheckBox) findViewById(R.id.tracer_checkbox);
-        final CheckBox bastion_checkbox = (CheckBox) findViewById(R.id.bastion_checkbox);
-        final CheckBox hanzo_checkbox = (CheckBox) findViewById(R.id.hanzo_checkbox);
-        final CheckBox junkrat_checkbox = (CheckBox) findViewById(R.id.junkrat_checkbox);
-        final CheckBox mei_checkbox = (CheckBox) findViewById(R.id.mei_checkbox);
-        final CheckBox torbjorn_checkbox = (CheckBox) findViewById(R.id.torbjorn_checkbox);
-        final CheckBox widowmaker_checkbox = (CheckBox) findViewById(R.id.widowmaker_checkbox);
-        final CheckBox dva_checkbox = (CheckBox) findViewById(R.id.dva_checkbox);
-        final CheckBox reinhardt_checkbox = (CheckBox) findViewById(R.id.reinhardt_checkbox);
-        final CheckBox roadhog_checkbox = (CheckBox) findViewById(R.id.roadhog_checkbox);
-        final CheckBox winston_checkbox = (CheckBox) findViewById(R.id.winston_checkbox);
-        final CheckBox zarya_checkbox = (CheckBox) findViewById(R.id.zarya_checkbox);
-        final CheckBox lucio_checkbox = (CheckBox) findViewById(R.id.lucio_checkbox);
-        final CheckBox mercy_checkbox = (CheckBox) findViewById(R.id.mercy_checkbox);
-        final CheckBox symmetra_checkbox = (CheckBox) findViewById(R.id.symmetra_checkbox);
-        final CheckBox zenyatta_checkbox = (CheckBox) findViewById(R.id.zenyatta_checkbox);
 
         final android.widget.CheckBox[] cBoxName = {offenseCheck, defenseCheck, tankCheck, supportCheck, genji_checkbox, mccree_checkbox, pharah_checkbox, reaper_checkbox, soldier76_checkbox, tracer_checkbox, bastion_checkbox, hanzo_checkbox,
                 junkrat_checkbox, mei_checkbox, torbjorn_checkbox, widowmaker_checkbox, dva_checkbox, reinhardt_checkbox, roadhog_checkbox,
@@ -65,31 +91,6 @@ public class heroList extends AppCompatActivity {
     }
 
     public void deselectAllGo(View view) {
-        final CheckBox offenseCheck = (CheckBox) findViewById(R.id.offenseCheck);
-        final CheckBox defenseCheck = (CheckBox) findViewById(R.id.defenseCheck);
-        final CheckBox tankCheck = (CheckBox) findViewById(R.id.tankCheck);
-        final CheckBox supportCheck = (CheckBox) findViewById(R.id.supportCheck);
-        final CheckBox genji_checkbox = (CheckBox) findViewById(R.id.genji_checkbox);
-        final CheckBox mccree_checkbox = (CheckBox) findViewById(R.id.mccree_checkbox);
-        final CheckBox pharah_checkbox = (CheckBox) findViewById(R.id.pharah_checkbox);
-        final CheckBox reaper_checkbox = (CheckBox) findViewById(R.id.reaper_checkbox);
-        final CheckBox soldier76_checkbox = (CheckBox) findViewById(R.id.soldier76_checkbox);
-        final CheckBox tracer_checkbox = (CheckBox) findViewById(R.id.tracer_checkbox);
-        final CheckBox bastion_checkbox = (CheckBox) findViewById(R.id.bastion_checkbox);
-        final CheckBox hanzo_checkbox = (CheckBox) findViewById(R.id.hanzo_checkbox);
-        final CheckBox junkrat_checkbox = (CheckBox) findViewById(R.id.junkrat_checkbox);
-        final CheckBox mei_checkbox = (CheckBox) findViewById(R.id.mei_checkbox);
-        final CheckBox torbjorn_checkbox = (CheckBox) findViewById(R.id.torbjorn_checkbox);
-        final CheckBox widowmaker_checkbox = (CheckBox) findViewById(R.id.widowmaker_checkbox);
-        final CheckBox dva_checkbox = (CheckBox) findViewById(R.id.dva_checkbox);
-        final CheckBox reinhardt_checkbox = (CheckBox) findViewById(R.id.reinhardt_checkbox);
-        final CheckBox roadhog_checkbox = (CheckBox) findViewById(R.id.roadhog_checkbox);
-        final CheckBox winston_checkbox = (CheckBox) findViewById(R.id.winston_checkbox);
-        final CheckBox zarya_checkbox = (CheckBox) findViewById(R.id.zarya_checkbox);
-        final CheckBox lucio_checkbox = (CheckBox) findViewById(R.id.lucio_checkbox);
-        final CheckBox mercy_checkbox = (CheckBox) findViewById(R.id.mercy_checkbox);
-        final CheckBox symmetra_checkbox = (CheckBox) findViewById(R.id.symmetra_checkbox);
-        final CheckBox zenyatta_checkbox = (CheckBox) findViewById(R.id.zenyatta_checkbox);
 
         final android.widget.CheckBox[] cBoxName = {offenseCheck, defenseCheck, tankCheck, supportCheck, genji_checkbox, mccree_checkbox, pharah_checkbox, reaper_checkbox, soldier76_checkbox, tracer_checkbox, bastion_checkbox, hanzo_checkbox,
                 junkrat_checkbox, mei_checkbox, torbjorn_checkbox, widowmaker_checkbox, dva_checkbox, reinhardt_checkbox, roadhog_checkbox,
@@ -109,14 +110,6 @@ public class heroList extends AppCompatActivity {
     }
 
     public void roleCheckOffense(View view) {
-        final CheckBox offenseCheck = (CheckBox) findViewById(R.id.offenseCheck);
-        final CheckBox genji_checkbox = (CheckBox) findViewById(R.id.genji_checkbox);
-        final CheckBox mccree_checkbox = (CheckBox) findViewById(R.id.mccree_checkbox);
-        final CheckBox pharah_checkbox = (CheckBox) findViewById(R.id.pharah_checkbox);
-        final CheckBox reaper_checkbox = (CheckBox) findViewById(R.id.reaper_checkbox);
-        final CheckBox soldier76_checkbox = (CheckBox) findViewById(R.id.soldier76_checkbox);
-        final CheckBox tracer_checkbox = (CheckBox) findViewById(R.id.tracer_checkbox);
-
 
         final android.widget.CheckBox[] cBoxName = {genji_checkbox, mccree_checkbox, pharah_checkbox, reaper_checkbox, soldier76_checkbox, tracer_checkbox};
 
@@ -137,13 +130,6 @@ public class heroList extends AppCompatActivity {
 
 
     public void roleCheckDefense(View view) {
-        final CheckBox defenseCheck = (CheckBox) findViewById(R.id.defenseCheck);
-        final CheckBox bastion_checkbox = (CheckBox) findViewById(R.id.bastion_checkbox);
-        final CheckBox hanzo_checkbox = (CheckBox) findViewById(R.id.hanzo_checkbox);
-        final CheckBox junkrat_checkbox = (CheckBox) findViewById(R.id.junkrat_checkbox);
-        final CheckBox mei_checkbox = (CheckBox) findViewById(R.id.mei_checkbox);
-        final CheckBox torbjorn_checkbox = (CheckBox) findViewById(R.id.torbjorn_checkbox);
-        final CheckBox widowmaker_checkbox = (CheckBox) findViewById(R.id.widowmaker_checkbox);
 
 
         final android.widget.CheckBox[] cBoxName = {bastion_checkbox, hanzo_checkbox,
@@ -166,12 +152,6 @@ public class heroList extends AppCompatActivity {
 
 
     public void roleCheckTank(View view) {
-        final CheckBox tankCheck = (CheckBox) findViewById(R.id.tankCheck);
-        final CheckBox dva_checkbox = (CheckBox) findViewById(R.id.dva_checkbox);
-        final CheckBox reinhardt_checkbox = (CheckBox) findViewById(R.id.reinhardt_checkbox);
-        final CheckBox roadhog_checkbox = (CheckBox) findViewById(R.id.roadhog_checkbox);
-        final CheckBox winston_checkbox = (CheckBox) findViewById(R.id.winston_checkbox);
-        final CheckBox zarya_checkbox = (CheckBox) findViewById(R.id.zarya_checkbox);
 
 
         final android.widget.CheckBox[] cBoxName = {dva_checkbox, reinhardt_checkbox, roadhog_checkbox,
@@ -194,11 +174,6 @@ public class heroList extends AppCompatActivity {
 
 
     public void roleCheckSupport(View view) {
-        final CheckBox supportCheck = (CheckBox) findViewById(R.id.supportCheck);
-        final CheckBox lucio_checkbox = (CheckBox) findViewById(R.id.lucio_checkbox);
-        final CheckBox mercy_checkbox = (CheckBox) findViewById(R.id.mercy_checkbox);
-        final CheckBox symmetra_checkbox = (CheckBox) findViewById(R.id.symmetra_checkbox);
-        final CheckBox zenyatta_checkbox = (CheckBox) findViewById(R.id.zenyatta_checkbox);
 
 
         final android.widget.CheckBox[] cBoxName = {lucio_checkbox, mercy_checkbox, symmetra_checkbox, zenyatta_checkbox};
@@ -226,28 +201,6 @@ public class heroList extends AppCompatActivity {
 
     public void randomGoCustom(View view)
     {
-
-        final CheckBox genji_checkbox = (CheckBox) findViewById(R.id.genji_checkbox);
-        final CheckBox mccree_checkbox = (CheckBox) findViewById(R.id.mccree_checkbox);
-        final CheckBox pharah_checkbox = (CheckBox) findViewById(R.id.pharah_checkbox);
-        final CheckBox reaper_checkbox = (CheckBox) findViewById(R.id.reaper_checkbox);
-        final CheckBox soldier76_checkbox = (CheckBox) findViewById(R.id.soldier76_checkbox);
-        final CheckBox tracer_checkbox = (CheckBox) findViewById(R.id.tracer_checkbox);
-        final CheckBox bastion_checkbox = (CheckBox) findViewById(R.id.bastion_checkbox);
-        final CheckBox hanzo_checkbox = (CheckBox) findViewById(R.id.hanzo_checkbox);
-        final CheckBox junkrat_checkbox = (CheckBox) findViewById(R.id.junkrat_checkbox);
-        final CheckBox mei_checkbox = (CheckBox) findViewById(R.id.mei_checkbox);
-        final CheckBox torbjorn_checkbox = (CheckBox) findViewById(R.id.torbjorn_checkbox);
-        final CheckBox widowmaker_checkbox = (CheckBox) findViewById(R.id.widowmaker_checkbox);
-        final CheckBox dva_checkbox = (CheckBox) findViewById(R.id.dva_checkbox);
-        final CheckBox reinhardt_checkbox = (CheckBox) findViewById(R.id.reinhardt_checkbox);
-        final CheckBox roadhog_checkbox = (CheckBox) findViewById(R.id.roadhog_checkbox);
-        final CheckBox winston_checkbox = (CheckBox) findViewById(R.id.winston_checkbox);
-        final CheckBox zarya_checkbox = (CheckBox) findViewById(R.id.zarya_checkbox);
-        final CheckBox lucio_checkbox = (CheckBox) findViewById(R.id.lucio_checkbox);
-        final CheckBox mercy_checkbox = (CheckBox) findViewById(R.id.mercy_checkbox);
-        final CheckBox symmetra_checkbox = (CheckBox) findViewById(R.id.symmetra_checkbox);
-        final CheckBox zenyatta_checkbox = (CheckBox) findViewById(R.id.zenyatta_checkbox);
 
         final android.widget.CheckBox[] cBoxName = {genji_checkbox, mccree_checkbox, pharah_checkbox, reaper_checkbox, soldier76_checkbox, tracer_checkbox, bastion_checkbox, hanzo_checkbox,
                 junkrat_checkbox, mei_checkbox, torbjorn_checkbox, widowmaker_checkbox, dva_checkbox, reinhardt_checkbox, roadhog_checkbox,
@@ -283,9 +236,6 @@ public class heroList extends AppCompatActivity {
         intent.putExtra("rH",randHero2);
 
         startActivity(intent);
-
-
-
 
 
     }
